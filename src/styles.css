@@ -1,0 +1,130 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+    margin: 0;
+
+}
+:root {
+	--pink-fruit: rgb(190,96,114);
+	--blue-fruit: rgb(0,104,159);
+	--green-fruit: rgb(153,195,100);
+
+}
+html {
+	font-family:
+		"Expletus Sans",
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: calc(1em + 0.5rem);
+	font-size: clamp(0.8rem, 0.8rem + 1vw, 1.8rem);
+	max-inline-size: 64ch;
+	-webkit-text-size-adjust: 100%; 
+	-webkit-font-smoothing: antialiased;
+	-moz-tab-size: 4; 
+	tab-size: 4;
+}
+body {
+	height: 100vh;
+	width: 100vw;	
+    padding: 5vw;
+    overflow-x: hidden;
+}
+
+ul, ol {
+	list-style: none;
+	padding-inline: 0;
+}
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+p {
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+	hyphens: auto;
+    line-height: 95%;
+    white-space: normal;
+}
+.hidden {
+	display: none;
+}
+/* ============================================*/
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+#button-container {
+    display: flex;
+    gap: 0.5rem;
+}
+button {
+    border: none;
+    width: 3.8rem;
+    height: 1.7rem; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgba(10, 10, 10, .7);
+    color: white;
+}
+button:hover {
+    font-weight: 1000;
+}
+.active {
+    width: 3.8rem;
+    height: 1.8rem; 
+    font-weight: 1000;
+    background-color: black;
+}
+
+h1 {
+    margin-bottom: 0.3rem;
+}
+/* ============================================*/
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:1rem 2rem;
+    background-size: cover;
+    background-position: center;
+    height: calc(100% - 5vh);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.half {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 1rem;
+    margin: 1rem;
+    max-width: max-content;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 0.5rem;
+}
+
+.grid .half {
+    width: auto;
+    
+}
+.half p {
+    font-size: smaller;
+    line-height: 110%;
+}
+
